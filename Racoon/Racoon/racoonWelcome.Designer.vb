@@ -25,9 +25,10 @@ Partial Class racoonWelcome
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.UpdateTask = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -37,6 +38,8 @@ Partial Class racoonWelcome
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Clear = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -53,9 +56,10 @@ Partial Class racoonWelcome
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.UpdateTask)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.RichTextBox1)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.ProgressBar1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 21)
         Me.GroupBox1.Name = "GroupBox1"
@@ -64,28 +68,38 @@ Partial Class racoonWelcome
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
+        'UpdateTask
+        '
+        Me.UpdateTask.Location = New System.Drawing.Point(514, 44)
+        Me.UpdateTask.Name = "UpdateTask"
+        Me.UpdateTask.Size = New System.Drawing.Size(75, 23)
+        Me.UpdateTask.TabIndex = 6
+        Me.UpdateTask.Text = "UpdateTask"
+        Me.UpdateTask.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(113, 16)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(121, 23)
+        Me.TextBox1.TabIndex = 5
+        '
         'RichTextBox1
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(266, 19)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(233, 49)
+        Me.RichTextBox1.Size = New System.Drawing.Size(242, 49)
         Me.RichTextBox1.TabIndex = 3
         Me.RichTextBox1.Text = ""
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(111, 16)
+        Me.ComboBox1.Items.AddRange(New Object() {"In Progress", "Assistance Needed", "Completed"})
+        Me.ComboBox1.Location = New System.Drawing.Point(113, 45)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
         Me.ComboBox1.TabIndex = 2
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(111, 45)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(121, 23)
-        Me.ProgressBar1.TabIndex = 1
         '
         'Label2
         '
@@ -140,7 +154,7 @@ Partial Class racoonWelcome
         Me.TabControl1.Location = New System.Drawing.Point(12, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(776, 137)
+        Me.TabControl1.Size = New System.Drawing.Size(776, 134)
         Me.TabControl1.TabIndex = 5
         '
         'TabPage1
@@ -152,7 +166,7 @@ Partial Class racoonWelcome
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(768, 109)
+        Me.TabPage1.Size = New System.Drawing.Size(768, 106)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -162,16 +176,36 @@ Partial Class racoonWelcome
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(768, 109)
+        Me.TabPage2.Size = New System.Drawing.Size(768, 106)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 15
+        Me.ListBox1.Location = New System.Drawing.Point(505, 176)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(279, 229)
+        Me.ListBox1.TabIndex = 6
+        '
+        'Clear
+        '
+        Me.Clear.Location = New System.Drawing.Point(709, 411)
+        Me.Clear.Name = "Clear"
+        Me.Clear.Size = New System.Drawing.Size(75, 23)
+        Me.Clear.TabIndex = 7
+        Me.Clear.Text = "Clear"
+        Me.Clear.UseVisualStyleBackColor = True
         '
         'racoonWelcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Clear)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "racoonWelcome"
@@ -188,7 +222,6 @@ Partial Class racoonWelcome
 
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label3 As Label
@@ -200,4 +233,8 @@ Partial Class racoonWelcome
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Clear As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents UpdateTask As Button
 End Class
