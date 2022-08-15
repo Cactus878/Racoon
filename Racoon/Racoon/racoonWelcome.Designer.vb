@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class racoonWelcome
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,15 @@ Partial Class racoonWelcome
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.AddText = New System.Windows.Forms.Button()
         Me.UpdateTask = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.TaskTextBox = New System.Windows.Forms.RichTextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -38,8 +39,8 @@ Partial Class racoonWelcome
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Clear = New System.Windows.Forms.Button()
+        Me.TaskList = New System.Windows.Forms.ListView()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -56,9 +57,10 @@ Partial Class racoonWelcome
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.AddText)
         Me.GroupBox1.Controls.Add(Me.UpdateTask)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox1.Controls.Add(Me.TaskTextBox)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 21)
@@ -67,6 +69,15 @@ Partial Class racoonWelcome
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
+        '
+        'AddText
+        '
+        Me.AddText.Location = New System.Drawing.Point(514, 18)
+        Me.AddText.Name = "AddText"
+        Me.AddText.Size = New System.Drawing.Size(75, 23)
+        Me.AddText.TabIndex = 7
+        Me.AddText.Text = "AddText"
+        Me.AddText.UseVisualStyleBackColor = True
         '
         'UpdateTask
         '
@@ -84,13 +95,13 @@ Partial Class racoonWelcome
         Me.TextBox1.Size = New System.Drawing.Size(121, 23)
         Me.TextBox1.TabIndex = 5
         '
-        'RichTextBox1
+        'TaskTextBox
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(266, 19)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(242, 49)
-        Me.RichTextBox1.TabIndex = 3
-        Me.RichTextBox1.Text = ""
+        Me.TaskTextBox.Location = New System.Drawing.Point(266, 19)
+        Me.TaskTextBox.Name = "TaskTextBox"
+        Me.TaskTextBox.Size = New System.Drawing.Size(242, 49)
+        Me.TaskTextBox.TabIndex = 3
+        Me.TaskTextBox.Text = ""
         '
         'ComboBox1
         '
@@ -181,15 +192,6 @@ Partial Class racoonWelcome
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(505, 176)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(279, 229)
-        Me.ListBox1.TabIndex = 6
-        '
         'Clear
         '
         Me.Clear.Location = New System.Drawing.Point(709, 411)
@@ -199,13 +201,22 @@ Partial Class racoonWelcome
         Me.Clear.Text = "Clear"
         Me.Clear.UseVisualStyleBackColor = True
         '
+        'TaskList
+        '
+        Me.TaskList.HideSelection = False
+        Me.TaskList.Location = New System.Drawing.Point(524, 176)
+        Me.TaskList.Name = "TaskList"
+        Me.TaskList.Size = New System.Drawing.Size(260, 229)
+        Me.TaskList.TabIndex = 8
+        Me.TaskList.UseCompatibleStateImageBehavior = False
+        '
         'racoonWelcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.TaskList)
         Me.Controls.Add(Me.Clear)
-        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "racoonWelcome"
@@ -225,7 +236,7 @@ Partial Class racoonWelcome
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents TaskTextBox As RichTextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
@@ -233,8 +244,9 @@ Partial Class racoonWelcome
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Clear As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents UpdateTask As Button
+    Friend WithEvents AddText As Button
+    Friend WithEvents TaskList As ListView
 End Class
