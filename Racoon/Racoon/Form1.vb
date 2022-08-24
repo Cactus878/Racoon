@@ -15,13 +15,13 @@
         username = UsernameTextBox.Text
         If UsernameTextBox.Text = "Boss" Then
             If PasswordTextBox.Text = "RacoonIsCool" Then
-                racoonWelcome.Visible = True
+                welcomePage.Visible = True
             Else
                 MsgBox("Error, wrong username or password", vbCritical, "Login")
             End If
         ElseIf UsernameTextBox.Text = "RacoonEmployee" Then
             PasswordTextBox.Text = "ILoveRacoons"
-            racoonWelcome.Visible = True
+            welcomePage.Visible = True
         Else
             MsgBox("Error, wrong username or password", vbCritical, "Login")
         End If
