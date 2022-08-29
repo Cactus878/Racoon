@@ -34,4 +34,5 @@
         UsernameTextBox.Text = ""
         UsernameTextBox.Focus()
     End Sub
+
 End Class

@@ -42,6 +42,7 @@ Partial Class welcomePage
         Me.Progress = New System.Windows.Forms.ColumnHeader()
         Me.Task_Information = New System.Windows.Forms.ColumnHeader()
         Me.Date_From_Task_Start = New System.Windows.Forms.ColumnHeader()
+        Me.videoCall = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -62,9 +63,10 @@ Partial Class welcomePage
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.TaskTextBox)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.DateTimePicker)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 58)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(756, 81)
+        Me.GroupBox1.Size = New System.Drawing.Size(772, 81)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
@@ -87,9 +89,9 @@ Partial Class welcomePage
         '
         'UpdateTask
         '
-        Me.UpdateTask.Location = New System.Drawing.Point(514, 44)
+        Me.UpdateTask.Location = New System.Drawing.Point(675, 48)
         Me.UpdateTask.Name = "UpdateTask"
-        Me.UpdateTask.Size = New System.Drawing.Size(75, 23)
+        Me.UpdateTask.Size = New System.Drawing.Size(91, 23)
         Me.UpdateTask.TabIndex = 6
         Me.UpdateTask.Text = "UpdateTask"
         Me.UpdateTask.UseVisualStyleBackColor = True
@@ -120,9 +122,9 @@ Partial Class welcomePage
         '
         'DateTimePicker
         '
-        Me.DateTimePicker.Location = New System.Drawing.Point(12, 145)
+        Me.DateTimePicker.Location = New System.Drawing.Point(616, 19)
         Me.DateTimePicker.Name = "DateTimePicker"
-        Me.DateTimePicker.Size = New System.Drawing.Size(200, 23)
+        Me.DateTimePicker.Size = New System.Drawing.Size(150, 23)
         Me.DateTimePicker.TabIndex = 9
         '
         'Label3
@@ -174,9 +176,9 @@ Partial Class welcomePage
         '
         Me.TaskList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Name, Me.Task_Name, Me.Progress, Me.Task_Information, Me.Date_From_Task_Start})
         Me.TaskList.HideSelection = False
-        Me.TaskList.Location = New System.Drawing.Point(218, 145)
+        Me.TaskList.Location = New System.Drawing.Point(219, 145)
         Me.TaskList.Name = "TaskList"
-        Me.TaskList.Size = New System.Drawing.Size(566, 260)
+        Me.TaskList.Size = New System.Drawing.Size(565, 260)
         Me.TaskList.TabIndex = 11
         Me.TaskList.UseCompatibleStateImageBehavior = False
         Me.TaskList.View = System.Windows.Forms.View.Details
@@ -206,18 +208,27 @@ Partial Class welcomePage
         Me.Date_From_Task_Start.Text = "Date_From_Task_Start"
         Me.Date_From_Task_Start.Width = 180
         '
+        'videoCall
+        '
+        Me.videoCall.Location = New System.Drawing.Point(12, 146)
+        Me.videoCall.Name = "videoCall"
+        Me.videoCall.Size = New System.Drawing.Size(201, 38)
+        Me.videoCall.TabIndex = 12
+        Me.videoCall.Text = "Create Video Call"
+        Me.videoCall.UseVisualStyleBackColor = True
+        '
         'welcomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.videoCall)
         Me.Controls.Add(Me.TaskList)
         Me.Controls.Add(Me.ExitRacoon)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.DateTimePicker)
         Me.Controls.Add(Me.Clear)
         Me.Controls.Add(Me.Label1)
         'Me.Name = "welcomePage"
@@ -249,4 +260,5 @@ Partial Class welcomePage
     Friend WithEvents Progress As ColumnHeader
     Friend WithEvents Task_Information As ColumnHeader
     Friend WithEvents Date_From_Task_Start As ColumnHeader
+    Friend WithEvents videoCall As Button
 End Class
