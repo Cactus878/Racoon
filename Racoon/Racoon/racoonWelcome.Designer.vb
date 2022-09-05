@@ -22,6 +22,7 @@ Partial Class welcomePage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.NameText = New System.Windows.Forms.TextBox()
@@ -43,6 +44,10 @@ Partial Class welcomePage
         Me.Task_Information = New System.Windows.Forms.ColumnHeader()
         Me.Date_From_Task_Start = New System.Windows.Forms.ColumnHeader()
         Me.videoCall = New System.Windows.Forms.Button()
+        Me.BreakTimer = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -217,11 +222,44 @@ Partial Class welcomePage
         Me.videoCall.Text = "Create Video Call"
         Me.videoCall.UseVisualStyleBackColor = True
         '
+        'BreakTimer
+        '
+        Me.BreakTimer.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BreakTimer.Location = New System.Drawing.Point(13, 191)
+        Me.BreakTimer.Name = "BreakTimer"
+        Me.BreakTimer.Size = New System.Drawing.Size(94, 42)
+        Me.BreakTimer.TabIndex = 13
+        Me.BreakTimer.Text = "Create Break Timer"
+        Me.BreakTimer.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(113, 202)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 23)
+        Me.TextBox2.TabIndex = 14
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 240)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(41, 15)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "Label2"
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'welcomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.BreakTimer)
         Me.Controls.Add(Me.videoCall)
         Me.Controls.Add(Me.TaskList)
         Me.Controls.Add(Me.ExitRacoon)
@@ -231,7 +269,7 @@ Partial Class welcomePage
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Clear)
         Me.Controls.Add(Me.Label1)
-        'Me.Name = "welcomePage"
+        Me.Name = "welcomePage"
         Me.Text = "welcome"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -261,4 +299,8 @@ Partial Class welcomePage
     Friend WithEvents Task_Information As ColumnHeader
     Friend WithEvents Date_From_Task_Start As ColumnHeader
     Friend WithEvents videoCall As Button
+    Friend WithEvents BreakTimer As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Timer1 As Timer
 End Class

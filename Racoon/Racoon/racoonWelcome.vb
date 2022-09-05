@@ -2,6 +2,7 @@
     Dim taskName As String
     Dim taskText As String
     Dim currentItem As Integer = 0
+    Dim time As Integer
 
     Private Sub racoonWelcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = "User:" + " " + username
@@ -41,5 +42,14 @@
 
     Private Sub videoCall_Click(sender As Object, e As EventArgs) Handles videoCall.Click
         RaccoonCall.Visible = True
+    End Sub
+
+    Private Sub Break_Click(sender As Object, e As EventArgs) Handles BreakTimer.Click
+        time = TextBox2.Text
+        Timer1.Interval = time
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
     End Sub
 End Class
